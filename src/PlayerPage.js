@@ -25,13 +25,25 @@ function PlayerPage() {
   const filtered = playerInfo.filter((player)=>{
     return player.name.toLowerCase().includes((searched.toLowerCase()))
   })
+  function updatedArray(deletedPlayer) {
+    const updatedPlayers = playerInfo.filter((player) => {
+      return player.id !== deletedPlayer.id;
+    });
+    setPlayerInfo(updatedPlayers);
+  }
+  function filterPosition(position){
+  const filterRoles = playerInfo.filter(pos =>pos.position===position)
+  setPlayerInfo(filterRoles)
+  }
+ 
 
   return (
     <main>
+      
       <NewPlayerForm addPlayer={addPlayer} />
       <Search searched={searched} setSearched={setSearched}/>
-      <FilterBtns/>
-      <PlayerList filtered={filtered}/>
+      <FilterBtns setFilterValue={filterPosition}/>
+      <PlayerList filtered={filtered} onDelete={updatedArray} />
     </main>
   );
 }

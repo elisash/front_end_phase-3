@@ -1,11 +1,21 @@
 import {useState} from "react";
-    function Card({playerObject}){
+    function Card({playerObject,onDelete}){
 
- const[inStock, setInStock] = useState(true)
+const[inStock, setInStock] = useState(true)
 
- function handleClick(){
-  setInStock(!inStock)
- }
+
+//  function handleClick(){
+//   setInStock(!inStock)
+//  }
+ function handleDelete() {
+  fetch(`http://localhost:9292/players/${playerObject.id}`, {
+    method: "DELETE",
+  })
+    .then((r) => r.json())
+    .then(() => onDelete(playerObject));
+}
+
+
   
  
   return (
@@ -20,6 +30,8 @@ import {useState} from "react";
 
      
      <button>ADD PLAYER</button>
+     <button  onClick={handleDelete}>DELETE PLAYER</button>
+     
 
 
     

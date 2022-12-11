@@ -57,7 +57,7 @@ function handleClearForm(){
         <input type="text" name="image" placeholder="Image URL" value={image} onChange={e => setImage(e.target.value)} />
         <input type="text" name="club" placeholder="Club" onChange={e => setClub(e.target.value)}/>
         <input type="text" name="nationality" placeholder="Nationality" onChange={e => setNationality(e.target.value)}/>
-        <input type="number" name="height" placeholder="Height" onChange={e => setHeight(e.target.value)}/>
+        <input type="text" name="height" placeholder="Height" onChange={e => setHeight(e.target.value)}/>
         <input type="text" name="position" placeholder="Position" onChange={e => setPosition(e.target.value)}/>
         <input type="text" name="rating" placeholder="Rating" onChange={e => setRating(e.target.value)}/>
         <button type="submit">Add Player</button>

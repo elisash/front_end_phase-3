@@ -3,15 +3,15 @@ import Card from "./Card";
 
 
 
-function PlayerList({filtered}) {
+function PlayerList({filtered,onDelete}) {
   
 
 const allPlayers = filtered.map((playerObject)=>{
-  return <Card key={playerObject.id} playerObject={playerObject}/>
+  return <Card key={playerObject.id} playerObject={playerObject} onDelete={onDelete}/>
  })
 
   return (
-    <ul className="cards">{ allPlayers}</ul>
+    <ul className="cards">{ allPlayers} </ul>
   );
 }
 

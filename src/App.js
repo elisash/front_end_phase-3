@@ -7,10 +7,10 @@ import PlayerPage from "./PlayerPage";
 function App() {
   return (
     <div className="app">
-      <Header />
+       <Header />
       <IdealPlayers/>
       <PlayerPage />
-    </div>
+       </div>
   );
 }
 
