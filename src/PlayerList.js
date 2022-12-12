@@ -3,11 +3,11 @@ import Card from "./Card";
 
 
 
-function PlayerList({filtered,onDelete}) {
+function PlayerList({filtered,onDelete,updatedRating}) {
   
 
 const allPlayers = filtered.map((playerObject)=>{
-  return <Card key={playerObject.id} playerObject={playerObject} onDelete={onDelete}/>
+  return <Card key={playerObject.id} playerObject={playerObject} onDelete={onDelete} updatedRating={updatedRating}/>
  })
 
   return (

@@ -35,6 +35,17 @@ function PlayerPage() {
   const filterRoles = playerInfo.filter(pos =>pos.position===position)
   setPlayerInfo(filterRoles)
   }
+  function updateRating(changeRating){
+    
+    const updatedRatingArray = playerInfo.map(playerRating=>{
+      if(playerRating.id===changeRating.id){
+        return changeRating;
+      }else{
+        return playerRating
+      }
+    });
+    setPlayerInfo(updatedRatingArray)
+  }
  
 
   return (
@@ -43,7 +54,7 @@ function PlayerPage() {
       <NewPlayerForm addPlayer={addPlayer} />
       <Search searched={searched} setSearched={setSearched}/>
       <FilterBtns setFilterValue={filterPosition}/>
-      <PlayerList filtered={filtered} onDelete={updatedArray} />
+      <PlayerList filtered={filtered} onDelete={updatedArray} updatedRating={updateRating}/>
     </main>
   );
 }
