@@ -42,8 +42,8 @@ function postRating(){
       <p> <strong>Rating:</strong> {playerObject.rating}</p>
 
      
-     <button>ADD PLAYER</button>
-     <button  onClick={handleDelete}>DELETE PLAYER</button>
+     <button className="addPlayerBtn">ADD PLAYER</button>
+     <button className="deletePlayerBtn" onClick={handleDelete}>DELETE PLAYER</button>
      {<input type="text"
         id="change-rating"
         placeholder="Change Rating"

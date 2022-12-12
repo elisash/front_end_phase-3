@@ -174,7 +174,7 @@ border: solid white;
 }
 #change-rating{
    padding: 0.25rem;
-  border: none;
+  border: white;
   font-family: inherit;
   font-size: 1.2em;
   border-bottom: 2px solid gray;
@@ -183,6 +183,26 @@ border: solid white;
   margin-top:15px;
   font-weight: bold;
   
+  
+}
+.addPlayerBtn:hover,.deletePlayerBtn:hover{
+  background: linear-gradient(rgba(120, 6, 58, .9), rgba(100, 150, 150, .9)) !important;
+  color:white
+}
+
+#rating-form:hover{
+  background: linear-gradient(rgba(120, 6, 58, .9), rgba(100, 150, 150, .9)) !important;
+  
+}
+.addPlayerBtn,.deletePlayerBtn{
+  background: linear-gradient(rgba(120, 6, 58, .9), rgba(0, 0, 0, .9)) !important;
+  color:white
+  
+}
+
+#rating-form{
+  background: linear-gradient(rgba(120, 6, 58, .9), rgba(0, 0, 0, .9)) !important;
+  color:white
 }
 
 
